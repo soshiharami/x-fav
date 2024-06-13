@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "X Like Link Grabber",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://x.com/*"],
+      "js": ["content.js", "env.js"],
+      "type": "module"
+    }
+  ]
+}
