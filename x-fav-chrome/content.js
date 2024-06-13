@@ -28,8 +28,6 @@ const observer = new MutationObserver((mutations) => {
                 likeButton.addEventListener('click', () => {
                 const tweetLink = getTweetLink(likeButton);
                 if (tweetLink) {
-                  console.log(URL)
-                  console.log(tweetLink)
                   fetch(`${URL}/likes?x=${tweetLink}`, requestOptions)
                     .then(response => response.text())
                     .then(result => console.log(result))
